@@ -1,0 +1,83 @@
+*{
+     margin: 0px;
+     padding: 0px;
+     box-sizing: border-box;
+}
+body{
+     margin: 0px;
+     padding: 0px;
+     font-size: 20px;
+}
+.site-wraper{
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    background: rgb(20,125,245);
+    background: linear-gradient(50deg, rgba(20,125,245,1) 0%, rgba(255,77,109,1) 100%);
+    /* background: url('../img/pexels-anastasiia-chaikovska-12367868.jpg') no-repeat;
+    background-size: cover; */
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: stretch;
+}
+.site-wraper .nav{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.site-wraper .main{
+    width: 100%;
+    height: 100%;
+    margin: auto 0px auto auto;
+    display: flex;
+    align-items: stretch;
+    justify-content: baseline;
+}
+.main{
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-content: center;
+}
+.main .card{
+  position: relative;
+  width: 20rem;
+  height: auto;
+  margin: 20px;
+  padding: 20px;
+  background: #ededed;
+  overflow: hidden;
+  animation: slide .4s;
+}
+.main .card img{
+  width: -webkit-fill-available;
+  height: 10rem;
+  object-fit: cover;
+}
+.main .card .text{
+  word-break:break-all;
+  text-overflow: ellipsis;
+}
+.prev{
+  width: 35px;
+  height: 35px;
+  background-size: cover;
+  background-image: url('../img/rigth-arrow.png');
+}
+.next{
+  width: 35px;
+  height: 35px;
+  background-size: cover;
+  background-image: url('../img/left-arrow.png');
+}
+@keyframes slide {
+  0%{
+    left: 10rem;
+  }
+  100%{
+    left: -10rem;
+  }
+}
